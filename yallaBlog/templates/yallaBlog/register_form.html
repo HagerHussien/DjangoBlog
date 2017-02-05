@@ -1,0 +1,33 @@
+
+{%  extends 'yallaBlog/base.html' %}
+
+
+
+{% block main_block %}
+
+<center>
+<table border="1">
+<tr>
+<td>
+
+<form method='POST'>{% csrf_token %}
+   {{register_form.as_p}}
+   re-password:
+   <input type="password" name="repassword">
+     	
+</td>
+</tr>
+
+
+<tr>
+<td>
+	<center>
+<button  type="sumbit"  class="myButton"> submit </button>
+</center>
+</td>
+</tr>
+
+</form>
+</table>
+<center>
+{% endblock %}

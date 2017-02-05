@@ -1,0 +1,12 @@
+def All_category(request):
+	all_cat = category.objects.all()
+	context = {'all_category': all_cat}
+	return render(request, 'yallaBlog/category.html' ,context)
+	
+
+
+
+
+------------------------------------------------------------
+url(r'^home$' , views.All_category),
+

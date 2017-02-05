@@ -10,6 +10,14 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
+#for gmail:
+EMAIL_USE_TLS= True 
+EMAIL_HOST= 'smtp.gmail.com'
+EMAIL_HOST_USER = 'asknda@gmail.com'
+EMAIL_HOST_PASSWORD='lkasdnklasdjlsdkf'
+EMAIL_PORT=587
+
+
 import os
 from django.contrib import messages
 
@@ -26,7 +34,7 @@ SECRET_KEY = 'a)b@(o!i9bengjer9^p(44npyybxd@w(=z4q*dfkhsk572eiix'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -70,7 +78,7 @@ ROOT_URLCONF = 'DjangoBlog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'yallaBlog/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

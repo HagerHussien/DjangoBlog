@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+<head>
+	<title></title>
+
+<link rel="stylesheet" type="text/css" href="{% static '/css/css.css' %}" />
+
+
+
+
+</head>
+<body>
+{% include 'yallaBlog/header.html'%}
+<hr> </hr>
+{% block main_block %}
+
+{% endblock %}
+
+{% include 'yallaBlog/footer.html' %}
+</body>
+</html>

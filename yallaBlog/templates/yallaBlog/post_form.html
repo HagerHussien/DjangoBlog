@@ -1,0 +1,71 @@
+
+{%  extends 'yallaBlog/base.html' %}
+{% block main_block %}
+
+
+
+<html>
+<head>
+	</head>
+	<body>
+
+
+
+
+
+
+<script>
+            function call_counter(url) {
+                window.open(url);
+                
+                    alert("post success");
+                
+            }
+        </script>
+
+
+<center>
+<table border="1">
+<tr>
+<td>
+
+<form method='POST'>{% csrf_token %}
+   {{po_form.as_p}}
+   <p> add image </p>
+   	<img src="a.jpg"  alt="image cant load" style="width:80px;height:80px;"/>
+   	<center>
+   <!-- <button type="sumbit" class="myButton"      >upload image</button> -->
+   <input id="id_image" type="file" class="myButton" name="upload">
+    </center>
+</td>
+</tr>
+
+
+<tr>
+<td>
+	<center>
+<!-- <button  type="sumbit" class="myButton"  onclick="call_counter('http://www.google.com');" >post </button>
+<button type="sumbit" class="myButton"class="w3-btn w3-round-xxlarge">reset</button> -->
+<button  type="sumbit" class="myButton"  > post </button>
+<button type="sumbit" class="myButton"class="w3-btn w3-round-xxlarge">reset</button>
+</center>
+</td>
+</tr>
+
+
+</form>
+
+
+</table>
+
+
+
+
+<center>
+</body>
+</html>
+{% endblock %}
+
+
+
+
