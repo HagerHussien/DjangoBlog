@@ -1,0 +1,52 @@
+ 
+
+{%  extends 'adminUser/baseadmin.html' %}
+
+{% block main_block %}
+
+
+
+<div class="bg">
+<div class="jumbotron" id="second" id="third">
+<div class="overlay"></div>
+<div class="container"> 
+ <h1 class="text  glyphicon glyphicon-list"   > Inappropriate Words  Control</h1>
+  <p class="text">  You can Create,update,delete or view details for any Inappropriate Words here</p>
+  </div>
+  
+</div>
+</div>
+
+
+
+
+ 
+<p></p>
+<div class="container">
+<table border ='10' class="table" id="cattable">
+<th class="newtext">Bad word name</th>
+
+<th colspan="4" class="newtext">action </th>
+{% for badw in bad_id  %}
+<tr>
+<td  class="newtext">{{ badw.rude_word }} </td>
+
+<td class="newtext"><a href="{{badw.id}}/edit">edit</a></td>
+
+<td class="newtext"><a href="{{badw.id}}/delete">delete</a></td>
+
+</tr>
+{% endfor%}
+
+</table>
+</div>
+
+<div class="text-center">
+<p><a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/yallaBlog/adminlink/adminhome/badword/new" role="button">new badword</a></p>
+</div>
+
+
+
+
+
+ {%  endblock %}

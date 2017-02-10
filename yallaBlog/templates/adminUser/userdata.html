@@ -1,0 +1,45 @@
+
+{%  extends 'adminUser/baseadmin.html' %}
+
+
+{% block main_block %}
+
+
+<div class="bg ">
+<div class="jumbotron" id="second" id="third">
+<div class="overlay"></div>
+<div class="container"> 
+  <h1 class="text glyphicon glyphicon-user">User Control</h1>
+  <p class="text">You can Create,update,delete or view details for any user here</p>
+  </div>
+  
+</div>
+</div>
+  <p class="newtext"><a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/yallaBlog/adminlink/adminhome/user/new" role="button">Create new user</a></p>
+
+<div class="container">
+<table border ='10' class="table">
+<th class="newtext">name</th> <th class="newtext">E-mail</th><th colspan="4" class="newtext">actions</th>
+
+{%  for us in us_id %}
+	{% if us.is_superuser %}
+		<tr bgcolor="red">
+			<td class="newtext">{{us.username}}</td>
+	        <td class="newtext">{{us.email}}</td>
+	        <td class="newtext"><a href="{{us.id}}/details">details</a></td>
+	        <td class="newtext">Edit</td>
+	        <td class="newtext">Delete</td>
+        </tr>
+    {% else %}
+        <tr >
+			<td class="newtext">{{us.username}}</td>
+	        <td class="newtext">{{us.email}}</td>
+	        <td class="newtext"><a href="{{us.id}}/details">details</a></td>
+	        <td class="newtext"><a href="{{us.id}}/edit">Edit</a></td>
+	        <td class="newtext"><a href="{{us.id}}/delete">Delete</a></td>
+        </tr>
+	{% endif %}
+{%  endfor  %}
+</table>
+
+ {%  endblock %}

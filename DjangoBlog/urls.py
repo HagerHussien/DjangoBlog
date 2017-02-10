@@ -15,10 +15,20 @@ Including another URLconf
 """
 from django.conf.urls import url,include
 from django.contrib import admin
+#from moments_app.views import *
+#from yallaBlog.views import *
+#from django.contrib.auth import views
+#from yallaBlog.forms import login_form
+#from yallaBlog.views import index
 
+#from moments_app import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^yallaBlog/',include('yallaBlog.urls')),
+    url(r'^logout/$', 'django.contrib.auth.views.logout',
+                          {'next_page': '/yallaBlog/home'}),
+    url(r'^$' , include('yallaBlog.urls'))
+    #url(r'^login/$', views.login, {'template_name': 'login_form.html', 'authentication_form': login_form}, name='login'),
 
     # #user register 
     # url(r'^yallaBlog/register/$' , yallaBlog.views.register_user),

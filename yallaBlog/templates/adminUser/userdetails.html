@@ -1,0 +1,36 @@
+
+{%  extends 'adminUser/baseadmin.html' %}
+
+{% block main_block%}
+
+<div class="bg ">
+<div class="jumbotron" id="second" id="third">
+<div class="overlay"></div>
+<div class="container"> 
+  <h1 class="text glyphicon glyphicon-user">User Control</h1>
+  <p class="text">Your User details</p>
+  </div>
+  
+</div>
+</div>
+
+<div class="container">
+<table border ='10' class="table">
+<tr>
+<th class="newtext info">name</th> <th class="newtext">E-mail</th><th class="newtext info">is_superuser</th><th class="newtext">is_staff</th><th class="newtext info">is_active</th><th class="newtext">date_joined</th><th class="newtext info"></th>
+</tr>
+<tr>
+<td class="newtext info"> {{user_details.username}}</td>
+<td class="newtext"> {{user_details.email}}</td>
+<td class="newtext info"> {{user_details.is_superuser}}</td>
+<td class="newtext"> {{user_details.is_staff}}</td>
+<td class="newtext info"> {{user_details.is_active}}</td>
+<td class="newtext"> {{user_details.date_joined}}</td>
+<td class="newtext info"> <a href="/yallaBlog/adminlink/adminhome/user/">back</a>   </td>
+</tr>
+</table>
+</div>
+
+
+{% endblock %}
+

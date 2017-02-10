@@ -1,0 +1,37 @@
+
+
+{%  extends 'adminUser/baseadmin.html' %}
+
+
+{% load staticfiles %}
+
+<!-- {% static "" as base_url%} -->
+
+{% block main_block %}
+ 
+<div class="bg ">
+<div class="jumbotron" id="second" id="third">
+<div class="overlay"></div>
+<div class="container"> 
+  <h1 class="text glyphicon glyphicon-user">User Control</h1>
+  <p class="text">Your User details</p>
+  </div>
+  
+</div>
+</div>
+<div class="container">
+<table border="10" class="table">
+<th class="newtext info">user</th><th class="newtext ">title</th> <th class="newtext info">post</th><th class="newtext ">category</th><th class="newtext info">comment</th><th class="newtext ">image</th><th class="newtext info"></th>
+	<tr>
+<td class="newtext info">{{detalis_post.userpost}}</td>
+<td class="newtext">{{detalis_post.title}}</td>
+<td class="newtext info">{{detalis_post.post}}</td>
+<td class="newtext">{{detalis_post.cat}}</td>
+<td class="newtext info">{{detalis_post.comment}}</td>
+<td class="newtext"><img src="/static/{{detalis_post.image}} " width="100px" height="100px" /></td>
+<td class="newtext info"> <a href="/yallaBlog/adminlink/adminhome/post/">back</a>   </td>
+</tr>
+</table>
+</div>
+</ul>
+{%  endblock %}

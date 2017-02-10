@@ -1,0 +1,43 @@
+{%  extends 'yallaBlog/base.html' %}
+{% load bootstrap %}
+{% block main_block %}
+
+
+
+<!-- 
+
+
+    <script>
+
+            $(function(){
+                $('#show').click(function)(){
+                    $('#hide').hide()
+                })
+            $('#hide').click(function)(){
+                    $('#show').hide()
+                })
+
+            })
+
+        </script>
+ -->
+ <div class="container">
+
+
+ <div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  
+<form method='POST'> {% csrf_token %}
+   {{form|bootstrap}}
+
+    <center>
+<button  type="sumbit" class=" btn btn-primary" > sgin in  </button>
+</center>
+</form>
+</div>
+
+
+</div>
+</div>
+
+{% endblock %}

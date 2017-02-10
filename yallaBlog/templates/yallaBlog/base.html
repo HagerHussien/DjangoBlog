@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 
 {% load staticfiles %}
+<!-- {% static "" as base_url%} -->
 
 <html>
 <head>
-	<title></title>
-
-<link rel="stylesheet" type="text/css" href="{% static '/css/css.css' %}" />
+	<title>djangoBlog</title>
 
 
+	<link rel="stylesheet" type="text/css" href="{% static 'node_modules/bootstrap/dist/css/bootstrap.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
 
 
+
+<script type="text/javascript"  src="static/node_modules/tether/dist/js/tether.js"></script>
+<script type="text/javascript" src="static/node_modules/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="static/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+<!-- <script type="text/javascript" src="static/node_modules/tether/dist/js/tether.js"></script>
+  <script type="text/javascript" src="static/node_modules/jquery/dist/jquery.js"></script>
+  <script type="text/javascript" src="static/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="static/css/style.css"> -->
 </head>
 <body>
 {% include 'yallaBlog/header.html'%}
-<hr> </hr>
+
 {% block main_block %}
 
 {% endblock %}

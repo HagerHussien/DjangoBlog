@@ -1,0 +1,40 @@
+
+{%  extends 'adminUser/baseadmin.html' %}
+
+{% block main_block %}
+
+
+
+
+<div class="bg">
+<div class="jumbotron" id="second" id="third">
+<div class="overlay"></div>
+<div class="container"> 
+ <h1 class="text  glyphicon glyphicon-list"   > Category  Control</h1>
+  <p class="text">  You can Create,update,delete or view details for any category here</p>
+  </div>
+  
+</div>
+</div>
+
+<p></p>
+<div class="container">
+<table border ='2' class="table" id="cattable">
+<th class="newtext">name</th> <th colspan="2" class="newtext">actions</th>
+
+{%  for cat in cat_id %}
+<tr>
+	<td class="newtext  active">{{cat.name}}</td>
+	<td class="newtext success"><a href="{{cat.id}}/edit">Edit</a></td>
+	<td class="newtext warning"><a href="{{cat.id}}/delete">Delete</a></td>
+</tr>
+{%  endfor  %}
+</table>
+</div>
+
+<div class="text-center">
+<p><a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/yallaBlog/adminlink/adminhome/category/new" role="button">new category</a></p>
+</div>
+
+
+{%  endblock %}

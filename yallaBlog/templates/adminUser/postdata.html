@@ -1,0 +1,45 @@
+
+
+
+
+{%  extends 'adminUser/baseadmin.html' %}
+
+
+{% block main_block %}
+
+<div class="bg ">
+<div class="jumbotron" id="second" id="third">
+<div class="overlay"></div>
+<div class="container"> 
+  <h1 class="text ">Post Control</h1>
+  <p class="text">You can Create,update,delete or view details for any POST here</p>
+  </div>
+  
+</div>
+</div>
+  <p class="newtext"><a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/yallaBlog/adminlink/adminhome/post/new" role="button">Create new post</a></p>
+
+
+
+
+<div class="container">
+<table border ='10' class="table">
+<th class="newtext">Title</th> <th colspan="4" class="newtext">actions</th>
+
+{%  for po in all_posts %}
+<tr>
+	<td class="newtext">{{po.title}}</td>
+	
+	<td class="newtext"><a href="{{po.id}}/details">details</a></td>
+	<td class="newtext"><a href="{{po.id}}/edit">Change</a></td>
+	<td class="newtext"><a href="{{po.id}}/delete">Delete</a></td>
+</tr>
+{%  endfor  %}
+</table>
+</div>
+
+ 
+
+
+
+{%  endblock %}

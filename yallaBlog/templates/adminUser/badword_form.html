@@ -1,0 +1,42 @@
+{%  extends 'adminUser/baseadmin.html' %}
+
+
+{% block main_block %}
+
+
+
+<div class="bg">
+<div class="jumbotron" id="second" id="third">
+<div class="overlay"></div>
+<div class="container"> 
+ <h1 class="text  glyphicon glyphicon-list"   > Inappropriate Words  Control</h1>
+  <p class="text">  You can Create a new  Inappropriate Words here</p>
+  </div>
+  
+</div>
+</div>
+
+
+
+
+ 
+<p></p>
+<div class="container">
+<table border ='2' class="table" id="cattable">
+
+<tr>
+<td class="newtext">
+
+<form method='POST'>{% csrf_token %}
+   {{bad_form.as_p}}
+
+<button type="sumbit" >save </button>
+
+
+
+</form>
+</td>
+</tr>
+</table>
+</div?
+{%  endblock %}

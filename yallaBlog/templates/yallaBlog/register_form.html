@@ -1,33 +1,24 @@
-
 {%  extends 'yallaBlog/base.html' %}
-
-
-
+{% load bootstrap %}
 {% block main_block %}
 
-<center>
-<table border="1">
-<tr>
-<td>
+ <div class="container">
+
+
+ <div class="row">
+  <div class="col-md-6 col-md-offset-3">
 
 <form method='POST'>{% csrf_token %}
-   {{register_form.as_p}}
-   re-password:
-   <input type="password" name="repassword">
+{{form|bootstrap}}
+
      	
-</td>
-</tr>
-
-
-<tr>
-<td>
 	<center>
-<button  type="sumbit"  class="myButton"> submit </button>
+<button  type="sumbit"  class=" btn btn-success" >submit </button>
 </center>
-</td>
-</tr>
-
 </form>
-</table>
-<center>
+</div>
+
+
+</div>
+</div>
 {% endblock %}
