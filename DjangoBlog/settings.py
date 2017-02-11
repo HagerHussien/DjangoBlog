@@ -13,8 +13,8 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 #for gmail:
 EMAIL_USE_TLS= True 
 EMAIL_HOST= 'smtp.gmail.com'
-EMAIL_HOST_USER = 'abc@gmail.com'
-EMAIL_HOST_PASSWORD='password'
+EMAIL_HOST_USER = 'djangoBlog1234@gmail.com'
+EMAIL_HOST_PASSWORD='1234djangoBlog1234'
 EMAIL_PORT=587
 
 
